@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="servlet@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="servlet">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cpxs"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="master"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="quickcast"/>
+    <schema id="9" parent="1" name="spj"/>
+    <schema id="10" parent="1" name="sql"/>
+    <schema id="11" parent="1" name="test"/>
+    <schema id="12" parent="1" name="world"/>
+    <schema id="13" parent="1" name="xsgl"/>
+    <schema id="14" parent="1" name="xskc"/>
+    <schema id="15" parent="1" name="xunmei"/>
+    <table id="16" parent="2" name="friend"/>
+    <table id="17" parent="2" name="requestfriend"/>
+    <table id="18" parent="2" name="resourceinformation"/>
+    <table id="19" parent="2" name="user_authorization_table"/>
+    <table id="20" parent="2" name="userinformation"/>
+    <column id="21" parent="16" name="FriendID">
+      <Position>3</Position>
+      <Comment>好友ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="16" name="Name">
+      <Position>2</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="16" name="FriendName">
+      <Position>4</Position>
+      <Comment>好友名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="16" name="emp_phone">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="16" name="PRIMARY">
+      <ColNames>emp_phone
+FriendID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="17" name="UserID">
+      <Position>4</Position>
+      <Comment>被请求的ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="17" name="RequesterID">
+      <Position>1</Position>
+      <Comment>请求加好友的ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="17" name="ReqSessionID">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="17" name="isdeal">
+      <Position>3</Position>
+      <Comment>用户的请求是否被处理</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="30" parent="17" name="PRIMARY">
+      <ColNames>UserID
+RequesterID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="18" name="ResourceID">
+      <Position>2</Position>
+      <Comment>共享资源ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="18" name="Name">
+      <Position>3</Position>
+      <Comment>共享资源文件名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="18" name="emp_phone">
+      <Position>1</Position>
+      <Comment>共享文件所属用户ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="34" parent="18" name="PRIMARY">
+      <ColNames>emp_phone
+ResourceID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="19" name="Identity">
+      <Position>1</Position>
+      <Comment>自增主键</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="19" name="User_id">
+      <Position>2</Position>
+      <Comment>共享文件所属用户ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="19" name="Friend_id">
+      <Position>3</Position>
+      <Comment>能访问此文件的用户ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="19" name="File_name">
+      <Position>4</Position>
+      <Comment>文件名，唯一标识文件</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="19" name="Key_id">
+      <Position>5</Position>
+      <Comment>解密密钥标识</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="40" parent="19" name="IsHandle">
+      <Position>6</Position>
+      <Comment>分享请求是否被服务器处理</Comment>
+      <DataType>int(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="41" parent="19" name="Share_time">
+      <Position>7</Position>
+      <Comment>用户请求分享文件的时间</Comment>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <key id="42" parent="19" name="PRIMARY">
+      <ColNames>Identity</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="20" name="UserID">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="20" name="Name">
+      <Position>3</Position>
+      <Comment>用户名</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="45" parent="20" name="IPAddr">
+      <Position>4</Position>
+      <Comment>IP地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="46" parent="20" name="Password">
+      <Position>2</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="47" parent="20" name="SessionID">
+      <Position>5</Position>
+      <Comment>用户的SessionID</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="48" parent="20" name="flag">
+      <Position>6</Position>
+      <Comment>好友请求标识符</Comment>
+      <DataType>int(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="49" parent="20" name="PRIMARY">
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

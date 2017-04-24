@@ -1,0 +1,177 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <listener>
+    <listener-class>MySessionListener</listener-class>
+  </listener>
+
+
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>judge_empphone</servlet-name>
+    <servlet-class>Judge_EmpPhone</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>helloworld</servlet-name>
+    <servlet-class>HelloWorld</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>Register</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>getFriends</servlet-name>
+    <servlet-class>GetFriends</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>judge_friend</servlet-name>
+    <servlet-class>Judge_Friend</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>addFriend</servlet-name>
+    <servlet-class>AddFriend</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>flag</servlet-name>
+    <servlet-class>Judge_Flag</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>pushMessage</servlet-name>
+    <servlet-class>PushMessage</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>checkIsDeal</servlet-name>
+    <servlet-class>CheckIsDeal</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ask_keyid</servlet-name>
+    <servlet-class>Ask_keyid</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>shareFlie</servlet-name>
+    <servlet-class>ShareFlie</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>checkIsHandle</servlet-name>
+    <servlet-class>CheckIsHandle</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>judge_user</servlet-name>
+    <servlet-class>Judge_User</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>askKeyID</servlet-name>
+    <servlet-class>AskKeyID</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>checkRepeat</servlet-name>
+    <servlet-class>CheckRepeat</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>judge_empphone</servlet-name>
+    <url-pattern>/Judge_EmpPhone.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>helloworld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/Register.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>getFriends</servlet-name>
+    <url-pattern>/GetFriends.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>judge_friend</servlet-name>
+    <url-pattern>/Judge_Friend.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>addFriend</servlet-name>
+    <url-pattern>/AddFriend.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>flag</servlet-name>
+    <url-pattern>/Judge_Flag.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>pushMessage</servlet-name>
+    <url-pattern>/PushMessage.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>checkIsDeal</servlet-name>
+    <url-pattern>/CheckIsDeal.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ask_keyid</servlet-name>
+    <url-pattern>/Ask_keyid.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>shareFlie</servlet-name>
+    <url-pattern>/ShareFile.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>checkIsHandle</servlet-name>
+    <url-pattern>/CheckIsHandle.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>judge_user</servlet-name>
+    <url-pattern>/Judge_User.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>askKeyID</servlet-name>
+    <url-pattern>/AskKeyID.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>checkRepeat</servlet-name>
+    <url-pattern>/CheckRepeat.do</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
